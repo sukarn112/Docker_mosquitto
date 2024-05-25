@@ -1,0 +1,6 @@
+2024-05-25 11:43:21,371 [CONNECTION MADE]
+2024-05-25 11:43:21,372 [SEND SUB] 1 [b'/event']
+2024-05-25 11:43:21,373 [SUBACK] 1 (0,)
+2024-05-25 11:43:21,373 Subscribed to topic with QoS: (0,)
+2024-05-25 11:43:58,173 Received message on topic /event: {"sensor_value":32.4}
+2024-05-25 11:44:18,448 Received message on topic /event: {"sensor_value":22.4}

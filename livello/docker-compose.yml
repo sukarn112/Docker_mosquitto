@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  mqtt-broker:
+    image: eclipse-mosquitto
+    container_name: mqtt-broker
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - type: bind
+        source: ~/livello/mosquittoconf/mosquitto.conf
+        target: /mosquitto/config/mosquitto.conf
+
+  python-script:
+    build: .
+    container_name: python-script
+    depends_on:
+      - mqtt-broker
+    volumes:
+      - type: bind
+        source: ~/livello
+        target: /app/log
